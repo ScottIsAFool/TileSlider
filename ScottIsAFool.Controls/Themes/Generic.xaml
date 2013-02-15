@@ -1,0 +1,201 @@
+﻿ <ResourceDictionary
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+ xmlns:local="clr-namespace:ScottIsAFool.WindowsPhone.Controls"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="local:TileSlider">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="local:TileSlider">
+                        <Grid Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Transparent" x:Name="theGrid">  
+                            <Grid.RenderTransform>
+                                <ScaleTransform x:Name="gridTransform" ScaleX="1" ScaleY="1" CenterX="0" CenterY="0" />
+                            </Grid.RenderTransform>
+                            <Grid.Resources>
+                                <Storyboard x:Name="moveTileDown">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="theText">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:7" Value="173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10" Value="173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="theImage">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:7" Value="173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10" Value="173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Name="moveTileUp">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="theText">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:7" Value="-173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="theImage">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:7" Value="-173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Name="moveTileLeft">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="theText">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:7" Value="-173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="theImage">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:7" Value="-173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Name="moveTileRight">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="theText">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:7" Value="173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10" Value="173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="theImage">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="84"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:7" Value="173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10" Value="173"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:10.5" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Name="spinTile">
+                                    <DoubleAnimationUsingKeyFrames x:Name="popInX" BeginTime="0:0:0.5" Storyboard.TargetName="gridTransform" Storyboard.TargetProperty="(ScaleX)">                                        
+                                        <SplineDoubleKeyFrame KeyTime="0:0:1" Value="1" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0.9" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:2" Value="1" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:5" Value="1" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:5.5" Value="0.9" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:6" Value="1" KeySpline="0,0,0,1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames x:Name="popInY" BeginTime="0:0:0.5" Storyboard.TargetName="gridTransform" Storyboard.TargetProperty="(ScaleY)">
+                                        <SplineDoubleKeyFrame KeyTime="0:0:1" Value="1" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0.9" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:2" Value="1" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:5" Value="1" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:5.5" Value="0.9" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:6" Value="1" KeySpline="0,0,0,1"/>
+                                    </DoubleAnimationUsingKeyFrames>                                    
+                                    <DoubleAnimationUsingKeyFrames x:Name="rotateForward" BeginTime="0:0:0.5" Storyboard.TargetName="projection" Storyboard.TargetProperty="(RotationX)">
+										<SplineDoubleKeyFrame KeyTime="0:0:1" Value="0" KeySpline="0,0,0,1"/>
+										<SplineDoubleKeyFrame KeyTime="0:0:2" Value="180" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:5" Value="180" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:6" Value="0" KeySpline="0,0,0,1"/>
+									</DoubleAnimationUsingKeyFrames>                                    
+                                    <DoubleAnimationUsingKeyFrames x:Name="longTextrotateForward" BeginTime="0:0:0.5" Storyboard.TargetName="theLongTextStack" Storyboard.TargetProperty="(RotationX)">
+                                        <SplineDoubleKeyFrame KeyTime="0:0:1" Value="-180" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:2" Value="0" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:5" Value="0" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:6" Value="-180" KeySpline="0,0,0,1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames x:Name="longTextStackrotateForward" BeginTime="0:0:0.5" Storyboard.TargetName="theLongText" Storyboard.TargetProperty="(RotationX)">
+                                        <SplineDoubleKeyFrame KeyTime="0:0:1" Value="-180" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:2" Value="0" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:5" Value="0" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:6" Value="-180" KeySpline="0,0,0,1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames x:Name="backTitlerotateForward" BeginTime="0:0:0.5" Storyboard.TargetName="theBackTitle" Storyboard.TargetProperty="(RotationX)">
+                                        <SplineDoubleKeyFrame KeyTime="0:0:1" Value="-180" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:2" Value="0" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:5" Value="0" KeySpline="0,0,0,1"/>
+                                        <SplineDoubleKeyFrame KeyTime="0:0:6" Value="-180" KeySpline="0,0,0,1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames x:Name="hideNormalText" BeginTime="0:0:0.5" Storyboard.TargetName="theText" Storyboard.TargetProperty="Opacity">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:5.9" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:6" Value="1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames x:Name="hideImage" BeginTime="0:0:0.5" Storyboard.TargetName="theStack" Storyboard.TargetProperty="Opacity">                                        
+                                        <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:5.1" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:5.2" Value="1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames x:Name="showLongTextStack" BeginTime="0:0:0.5" Storyboard.TargetName="longText" Storyboard.TargetProperty="Opacity">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:5.1" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:5.2" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames x:Name="showBackTitle" BeginTime="0:0:0.5" Storyboard.TargetName="backTitle" Storyboard.TargetProperty="Opacity">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:5.1" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:5.2" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames x:Name="showLongText" BeginTime="0:0:0.5" Storyboard.TargetName="longStack" Storyboard.TargetProperty="Opacity">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:5.1" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:5.2" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </Grid.Resources>
+                            <Grid x:Name="longStack" Opacity="0" MaxHeight="{TemplateBinding Height}" Background="{TemplateBinding TileBackground}">
+                                <Grid.Projection>
+                                    <PlaneProjection x:Name="theLongTextStack" RotationX="-180"/>
+                                </Grid.Projection>
+                                <Image Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Source="{TemplateBinding BackImageSource}"/>
+                                
+                                <TextBlock Grid.Row="0" x:Name="longText" MaxHeight="{TemplateBinding Height}" Opacity="0" TextWrapping="Wrap" Text="{TemplateBinding LongText}" Style="{TemplateBinding LongTextStyle}" RenderTransformOrigin="0.5,0.5">
+                                    <TextBlock.Projection>
+                                        <PlaneProjection x:Name="theLongText" RotationX="-180"/>
+                                    </TextBlock.Projection>
+                                </TextBlock>
+                                <TextBlock Grid.Row="1" x:Name="backTitle" Opacity="0" Style="{StaticResource PhoneTextNormalStyle}" RenderTransformOrigin="0.5,0.5" Text="{TemplateBinding BackTitle}" VerticalAlignment="Bottom">
+                                    <TextBlock.Projection>
+                                        <PlaneProjection x:Name="theBackTitle" RotationX="-180"/>
+                                    </TextBlock.Projection>
+                                </TextBlock>                                
+                            </Grid>
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Top" x:Name="theStack" Background="{TemplateBinding TileBackground}">
+                            	<StackPanel.Projection>
+                            		<PlaneProjection x:Name="projection" RotationX="0"/>                    	
+								</StackPanel.Projection>                              
+                                <TextBlock x:Name="theText" MaxHeight="{TemplateBinding Height}" MaxWidth="{TemplateBinding Width}" TextWrapping="Wrap" Text="{TemplateBinding Text}" Style="{TemplateBinding TextStyle}" VerticalAlignment="Bottom">
+                                    <UIElement.RenderTransform>
+                                        <CompositeTransform/>
+                                    </UIElement.RenderTransform>
+                                </TextBlock>
+                                <Grid x:Name="theImage">
+                                    <UIElement.RenderTransform>
+                                        <CompositeTransform/>
+                                    </UIElement.RenderTransform>
+                                    <Image Height="{TemplateBinding Height}" MaxWidth="{TemplateBinding Width}" Width="{TemplateBinding Width}" Stretch="{TemplateBinding Stretch}" Source="{TemplateBinding ImageSource}"/>
+                                    <TextBlock Text="{TemplateBinding Title}" Style="{StaticResource PhoneTextNormalStyle}" VerticalAlignment="Bottom"/>
+                                </Grid>
+                            </StackPanel>                            
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+</ResourceDictionary>

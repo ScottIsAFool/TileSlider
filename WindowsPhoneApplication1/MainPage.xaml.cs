@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Shapes;
+using Microsoft.Phone.Controls;
+using ScottIsAFool.WindowsPhone.Controls;
+
+namespace WindowsPhoneApplication1
+{
+    public partial class MainPage : PhoneApplicationPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void TileSlider_Click(object sender, RoutedEventArgs e)
+        {
+            TileSlider s = sender as TileSlider;            
+            MessageBox.Show(s.Text);
+        }
+    }
+}
